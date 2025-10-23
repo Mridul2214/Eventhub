@@ -226,7 +226,7 @@ const Profile = () => {
       if (u.startsWith('data:')) return u;
       if (/^https?:\/\//i.test(u)) return u;
       // assume backend dev server on 5000 for relative paths like /uploads/...
-      return `http://localhost:5000${u.startsWith('/') ? '' : '/'}${u}`;
+      return `https://eventhub-backend-vx0n.onrender.com/${u.startsWith('/') ? '' : '/'}${u}`;
     } catch { return u; }
   };
 
